@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="315.0" spacing="25.0" stylesheets="@/login.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.academiadecodigo.Controller.LoginController">
+   <children>
+      <ImageView fitHeight="27.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="/logo_ac_inv.png" />
+         </image>
+         <effect>
+            <Reflection fraction="0.71" topOpacity="0.2" />
+         </effect>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </ImageView>
+      <GridPane fx:id="gridPane" hgap="15.0" maxWidth="300.0" minWidth="265.0" nodeOrientation="LEFT_TO_RIGHT" vgap="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" prefWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+         <children>
+            <Label fx:id="cadetLabel" alignment="CENTER_RIGHT" text="&lt;Code Cadet&gt;" GridPane.halignment="RIGHT">
+               <font>
+                  <Font name="Helvetica Neue Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="passLabel" text="&lt;Password&gt;" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Helvetica Neue Medium" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailLabel" text="&lt;e-mail&gt;" GridPane.halignment="RIGHT" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Helvetica Neue Medium" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" promptText="Enter username" GridPane.columnIndex="1" />
+            <PasswordField fx:id="passwordField" promptText="Enter Password" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="emailField" promptText="Enter email" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="confirmLabel" text="&lt;Confirm&gt;" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Helvetica Neue Medium" size="12.0" />
+               </font>
+            </Label>
+            <PasswordField fx:id="confirmField" promptText="Confirm Password" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </GridPane>
+      <VBox fx:id="bottomBox" alignment="CENTER" prefHeight="98.0" prefWidth="230.0" spacing="15.0">
+         <children>
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#onLoginButtonPressed" prefHeight="39.0" prefWidth="129.0" text="Login" textAlignment="CENTER">
+               <font>
+                  <Font name="Helvetica Neue Medium" size="14.0" />
+               </font>
+            </Button>
+            <Label id="sign-up" fx:id="registerLabel" accessibleRole="HYPERLINK" onMouseClicked="#onRegisterButtonPressed" stylesheets="@../../../../res/login.css" text="New User? Sign up!" underline="true">
+               <font>
+                  <Font name="Helvetica Neue Medium" size="14.0" />
+               </font>
+            </Label>
+         </children>
+         <padding>
+            <Insets top="-10.0" />
+         </padding>
+      </VBox>
+      <Label id="errors" fx:id="systemMessages" />
+   </children>
+   <padding>
+      <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+   </padding>
+</VBox>

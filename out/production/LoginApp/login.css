@@ -1,0 +1,93 @@
+.root {
+    -fx-background-color: #222222;
+}
+
+.button {
+    -fx-background-color: #e31d1a,
+    linear-gradient(#e31d1a, darkred),
+    linear-gradient(#e31d1a 0%, darkred 100%);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-font-size: 11pt;
+
+}
+
+.button:hover {
+    -fx-background-color: #e31d1a,
+    linear-gradient(darkred,#e31d1a),
+    linear-gradient( darkred 0%, #e31d1a 100%);
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-font-size: 11pt;
+}
+.button:focused {
+
+}
+.button:pressed {
+    -fx-background-color: darkred;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-family: "Helvetica";
+    -fx-font-weight: bold;
+    -fx-font-size: 11pt;
+}
+
+#sign-up {
+    -fx-text-fill: gray;
+    -fx-font-family:"Helvetica";
+    -fx-font-weight: normal;
+    -fx-font-size: 11pt;
+}
+
+#sign-up:hover {
+    -fx-text-fill: #999999;
+    -fx-font-family:"Helvetica";
+    -fx-font-weight: normal;
+    -fx-font-size: 11pt;
+}
+
+.label {
+    -fx-text-fill: #a5a5a5;
+    -fx-font-family:"Helvetica";
+    -fx-font-weight: normal;
+    -fx-font-size: 10pt;
+
+}
+
+.text-input {
+    /*-fx-control-inner-background: #444444;*/
+    -fx-background-color: #444444;
+    -fx-border-color: #333333;
+    -fx-prompt-text-fill: gray;
+    -fx-text-fill: #999999;
+    -fx-font-family: "Courier New";
+    -fx-font-weight: bold;
+    -fx-highlight-text-fill: #dedede;
+    -fx-highlight-fill: darkred;
+}
+
+.text-input:focused {
+    /*-fx-control-inner-background: #444444;*/
+    -fx-background-color: #535353;
+    -fx-border-color: #333333;
+    -fx-prompt-text-fill: gray;
+    -fx-text-fill: #999999;
+    -fx-font-family: "Courier New";
+    -fx-font-weight: bold;
+    -fx-highlight-text-fill: #dedede;
+    -fx-highlight-fill: darkred;
+}
+
+
+#errors {
+    -fx-font-weight: bold;
+}
+
+.image-view {}
+
+
+
+
+
+
