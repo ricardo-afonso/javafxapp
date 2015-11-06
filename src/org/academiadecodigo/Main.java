@@ -1,13 +1,10 @@
 package org.academiadecodigo;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
-import org.academiadecodigo.Controller.LoginController;
-import org.academiadecodigo.Model.MockUserService;
-import org.academiadecodigo.Model.Navigation;
+import org.academiadecodigo.controller.LoginController;
+import org.academiadecodigo.model.JDBUserService;
+import org.academiadecodigo.model.MockUserService;
 
 public class Main extends Application {
 
@@ -18,7 +15,7 @@ public class Main extends Application {
         primaryStage.setTitle("Academia de Código");
         Navigation.getInstance().setStage(primaryStage);
         Navigation.getInstance().loadScreen("login");
-        ((LoginController) Navigation.getInstance().getController("login")).setService(new MockUserService());
+        ((LoginController) Navigation.getInstance().getController("login")).setService(new JDBUserService());
 
     }
 

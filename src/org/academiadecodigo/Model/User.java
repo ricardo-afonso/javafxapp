@@ -1,4 +1,4 @@
-package org.academiadecodigo.Model;
+package org.academiadecodigo.model;
 
 public class User {
 

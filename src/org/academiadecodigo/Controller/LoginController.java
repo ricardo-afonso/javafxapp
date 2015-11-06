@@ -1,4 +1,4 @@
-package org.academiadecodigo.Controller;
+package org.academiadecodigo.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,10 +12,9 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import org.academiadecodigo.Model.MockUserService;
-import org.academiadecodigo.Model.Navigation;
-import org.academiadecodigo.Model.User;
-import org.academiadecodigo.Model.UserService;
+import org.academiadecodigo.Navigation;
+import org.academiadecodigo.model.User;
+import org.academiadecodigo.model.UserService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -69,29 +68,32 @@ public class LoginController implements Initializable {
     @FXML
     public void onLoginButtonPressed(ActionEvent event) {
         if (isLogin) {
-            if (userServ.authenticate(usernameField.getText(), passwordField.getText())) {
-                systemMessages.setText("");
-                systemMessages.setTextFill(Color.web("#339933"));
-                systemMessages.setText("Authentication Succesful");
-                Navigation.getInstance().loadScreen("main");
+
+            if (usernameField.getText().length() > 2 && passwordField.getText().length() > 2) {
+                if (userServ.authenticate(usernameField.getText(), passwordField.getText())) {
+                    systemMessages.setText("");
+                    systemMessages.setTextFill(Color.web("#339933"));
+                    systemMessages.setText("Authentication Succesful");
+                    Navigation.getInstance().loadScreen("main");
 
 
+                } else {
+                    systemMessages.setText("");
+                    systemMessages.setTextFill(Color.web("#CC0000"));
+                    systemMessages.setText("Login Failed!");
+
+                }
             } else {
-                systemMessages.setText("");
-                systemMessages.setTextFill(Color.web("#CC0000"));
-                systemMessages.setText("Login Failed!");
-
-            }
-        } else {
-            if (passwordField.getText().equals(confirmField.getText())) {
-                userServ.addUser(new User(usernameField.getText(), passwordField.getText(), emailField.getText()));
-                systemMessages.setText("");
-                systemMessages.setTextFill(Color.web("#339933"));
-                systemMessages.setText("Register Sucessful");
-            } else {
-                systemMessages.setText("");
-                systemMessages.setTextFill(Color.web("#CC0000"));
-                systemMessages.setText("Password Mismatch");
+                if (passwordField.getText().equals(confirmField.getText())) {
+                    userServ.addUser(new User(usernameField.getText(), passwordField.getText(), emailField.getText()));
+                    systemMessages.setText("");
+                    systemMessages.setTextFill(Color.web("#339933"));
+                    systemMessages.setText("Register Sucessful");
+                } else {
+                    systemMessages.setText("");
+                    systemMessages.setTextFill(Color.web("#CC0000"));
+                    systemMessages.setText("Password Mismatch");
+                }
             }
         }
     }

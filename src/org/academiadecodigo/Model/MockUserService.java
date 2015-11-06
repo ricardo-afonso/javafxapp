@@ -1,4 +1,4 @@
-package org.academiadecodigo.Model;
+package org.academiadecodigo.model;
 
 import java.util.HashMap;
 import java.util.Map;

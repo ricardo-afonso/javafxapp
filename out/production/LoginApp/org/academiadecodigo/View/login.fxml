@@ -8,11 +8,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="315.0" spacing="25.0" stylesheets="@/login.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.academiadecodigo.Controller.LoginController">
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="409.0" prefWidth="315.0" spacing="25.0" stylesheets="@/login.css" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.academiadecodigo.controller.LoginController">
    <children>
       <ImageView fitHeight="27.0" fitWidth="290.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="/logo_ac_inv.png" />
+            <Image url="@/logo_ac_inv.png" />
          </image>
          <effect>
             <Reflection fraction="0.71" topOpacity="0.2" />

@@ -1,4 +1,4 @@
-package org.academiadecodigo.Model;
+package org.academiadecodigo;
 
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -27,7 +27,7 @@ public class Navigation {
 
     private final int MIN_WIDTH = 1024; // window width
     private final int MIN_HEIGHT = 768; // window height
-    private final String VIEW_PATH = "/org/academiadecodigo/View";
+    private final String VIEW_PATH = "/org/academiadecodigo/view";
 
     private LinkedList<Scene> scenes = new LinkedList<Scene>(); // Navigation History
     private Map<String, Initializable> controllers = new HashMap<>(); //Container of controllers

@@ -1,4 +1,4 @@
-package org.academiadecodigo.Controller;
+package org.academiadecodigo.controller;
 
 import javafx.fxml.Initializable;
 
